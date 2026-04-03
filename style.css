@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: white;
+  line-height: 1.6;
+}
+
+/* NAVBAR 🔥 */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* NAV LINK ANIMATION 🔥 */
+.nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO 🔥 */
+.hero {
+  background: linear-gradient(135deg,#6366f1,#22c55e);
+  padding: 100px 0;
+}
+
+.hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.hero img {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+/* BUTTON 🔥 */
+.btn {
+  background: white;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* SECTION */
+.section {
+  padding: 80px 0;
+}
+
+.gray {
+  background: #020617;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 32px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+/* CARD 🔥 */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+
+.card h2 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* HOVER 🔥 */
+.hover:hover {
+  transform: translateY(-12px) scale(1.04);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 40px rgba(99,102,241,0.6);
+}
+
+/* CENTER */
+.center {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #020617;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE 🔥 */
+@media (max-width: 768px) {
+  .hero-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero img {
+    max-width: 250px;
+  }
+
+  .nav ul {
+    display: none; /* keyinchalik burger menu qilamiz */
+  }
+}
