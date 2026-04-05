@@ -18,7 +18,7 @@ header {
   z-index: 100;
   background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
@@ -71,7 +71,7 @@ header {
 
 /* HERO 🔥 */
 .hero {
-  background: linear-gradient(135deg,#6366f1,#22c55e);
+  background: linear-gradient(135deg, #6366f1, #22c55e);
   padding: 100px 0;
 }
 
@@ -116,7 +116,7 @@ header {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* SECTION */
@@ -137,13 +137,13 @@ header {
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
 /* CARD 🔥 */
 .card {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 20px;
   text-align: center;
@@ -171,8 +171,8 @@ header {
 /* HOVER 🔥 */
 .hover:hover {
   transform: translateY(-12px) scale(1.04);
-  background: rgba(255,255,255,0.1);
-  box-shadow: 0 0 40px rgba(99,102,241,0.6);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
 }
 
 /* CENTER */
@@ -205,6 +205,683 @@ footer {
   }
 
   .nav ul {
-    display: none; /* keyinchalik burger menu qilamiz */
+    display: none;
+    /* keyinchalik burger menu qilamiz */
+  }
+}
+
+/* From Uiverse.io by jeremyssocial */
+.hacker-loader {
+  margin: 0 auto;
+  position: relative;
+  width: 24em;
+  height: 6em;
+  background-color: #0a0a0a;
+  border: 0.2em solid #00ff00;
+  border-radius: 0.5em;
+  padding: 1em;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(0, 255, 0, 0.3);
+}
+
+.loader-text {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.text-glitch {
+  color: #00ff00;
+  font-family: monospace;
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+}
+
+.text-glitch::before,
+.text-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  clip: rect(0, 0, 0, 0);
+}
+
+.text-glitch::before {
+  left: -0.1em;
+  text-shadow: 0.1em 0 #ff00ff;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+
+.text-glitch::after {
+  left: 0.1em;
+  text-shadow: -0.1em 0 #00ffff;
+  animation: glitch-effect 2s infinite linear alternate-reverse;
+}
+
+.loader-bar {
+  width: 100%;
+  height: 0.5em;
+  background-color: #003300;
+  border-radius: 0.25em;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00ff00;
+  animation: bar-fill-animation 2s infinite ease-in-out;
+}
+
+.bar-glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(0, 255, 0, 0.2),
+      transparent);
+  background-size: 200% 200%;
+  animation: bar-glitch-animation 2s infinite linear;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 0.2em;
+  height: 0.2em;
+  background-color: #00ff00;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particle-animation 2s infinite linear;
+}
+
+.particle:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 30%;
+  left: 60%;
+  animation-delay: 0.5s;
+}
+
+.particle:nth-child(3) {
+  top: 70%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(4) {
+  top: 90%;
+  left: 90%;
+  animation-delay: 1.5s;
+}
+
+.particle:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@keyframes bar-fill-animation {
+
+  0%,
+  100% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+}
+
+@keyframes bar-glitch-animation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes particle-animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(2em, 2em);
+  }
+}
+
+/* From Uiverse.io by Smit-Prajapati */
+.project-parent {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.project-card {
+  padding-top: 50px;
+  /* border-radius: 10px; */
+  border: 3px solid rgb(255, 255, 255);
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #0000 18.75%, #f3f3f3 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, #f3f3f3 -6.25% 6.25%, #ffffff 0 18.75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-card:hover {
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box {
+  background: url("./image/Rectangle\ 10.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.content-box1 {
+  background: url("./image/Frame\ 27@2x.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.content-box2 {
+  background: url("./image/Listings.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.content-box3 {
+  background: url("./image/bg_1\ 1\ \(2\).png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.overlay {
+
+  background-color: rgba(0, 0, 0, 0.482);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+.card-title {
+  display: inline-block;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.card-content {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f2f2f2;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 9px;
+  text-transform: uppercase;
+  color: rgb(7, 185, 255);
+  /* border-radius: 5px; */
+  background: white;
+  padding: 0.5rem 0.7rem;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.see-more:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.date-box {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 60px;
+  width: 60px;
+  background: white;
+  border: 1px solid rgb(7, 185, 255);
+  /* border-radius: 10px; */
+  padding: 10px;
+  transform: translate3d(0px, 0px, 80px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+}
+
+.date-box span {
+  display: block;
+  text-align: center;
+}
+
+.date-box .month {
+  color: rgb(4, 193, 250);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(4, 193, 250);
+}
+
+/* From Uiverse.io by jeremyssocial */
+.hacker-loader {
+  position: relative;
+  width: 24em;
+  height: 6em;
+  margin: 0 auto;
+  background-color: #0a0a0a;
+  border: 0.2em solid #fdfdfd;
+  border-radius: 0.5em;
+  padding: 1em;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(252, 252, 252, 0.3);
+}
+
+.loader-text {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.text-glitch {
+  color: #fafafa;
+  font-family: monospace;
+  font-size: 1.5em;
+  position: relative;
+  display: inline-block;
+}
+
+.text-glitch::before,
+.text-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  clip: rect(0, 0, 0, 0);
+}
+
+.text-glitch::before {
+  left: -0.1em;
+  text-shadow: 0.1em 0 #ff00ff;
+  animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+
+.text-glitch::after {
+  left: 0.1em;
+  text-shadow: -0.1em 0 #00ffff;
+  animation: glitch-effect 2s infinite linear alternate-reverse;
+}
+
+.loader-bar {
+  width: 100%;
+  height: 0.5em;
+  background-color: #003300;
+  border-radius: 0.25em;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00ff00;
+  animation: bar-fill-animation 2s infinite ease-in-out;
+}
+
+.bar-glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(0, 255, 0, 0.2),
+      transparent);
+  background-size: 200% 200%;
+  animation: bar-glitch-animation 2s infinite linear;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 0.2em;
+  height: 0.2em;
+  background-color: #00ff00;
+  border-radius: 50%;
+  opacity: 0;
+  animation: particle-animation 2s infinite linear;
+}
+
+.particle:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 30%;
+  left: 60%;
+  animation-delay: 0.5s;
+}
+
+.particle:nth-child(3) {
+  top: 70%;
+  left: 30%;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(4) {
+  top: 90%;
+  left: 90%;
+  animation-delay: 1.5s;
+}
+
+.particle:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(42px, 9999px, 44px, 0);
+  }
+
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+  }
+
+  10% {
+    clip: rect(48px, 9999px, 29px, 0);
+  }
+
+  15.0% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+
+  20% {
+    clip: rect(63px, 9999px, 27px, 0);
+  }
+
+  25% {
+    clip: rect(34px, 9999px, 55px, 0);
+  }
+
+  30.0% {
+    clip: rect(86px, 9999px, 73px, 0);
+  }
+
+  35% {
+    clip: rect(20px, 9999px, 20px, 0);
+  }
+
+  40% {
+    clip: rect(26px, 9999px, 60px, 0);
+  }
+
+  45% {
+    clip: rect(25px, 9999px, 66px, 0);
+  }
+
+  50% {
+    clip: rect(57px, 9999px, 98px, 0);
+  }
+
+  55.0% {
+    clip: rect(5px, 9999px, 46px, 0);
+  }
+
+  60.0% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+
+  65% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+
+  70% {
+    clip: rect(28px, 9999px, 99px, 0);
+  }
+
+  75% {
+    clip: rect(45px, 9999px, 69px, 0);
+  }
+
+  80% {
+    clip: rect(23px, 9999px, 85px, 0);
+  }
+
+  85.0% {
+    clip: rect(54px, 9999px, 84px, 0);
+  }
+
+  90% {
+    clip: rect(45px, 9999px, 47px, 0);
+  }
+
+  95% {
+    clip: rect(37px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(4px, 9999px, 91px, 0);
+  }
+}
+
+@keyframes bar-fill-animation {
+
+  0%,
+  100% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+}
+
+@keyframes bar-glitch-animation {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes particle-animation {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(2em, 2em);
   }
 }
